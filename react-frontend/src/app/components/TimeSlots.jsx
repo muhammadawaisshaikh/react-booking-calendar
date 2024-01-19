@@ -10,10 +10,11 @@ const TimeSlots = ({ date }) => {
 
     useEffect(() => {
         getSlots();
-    });
+    },[date]);
 
     const handleSlotClick = (slot) => {
         setSelectedSlot(slot);
+        console.log(selectedSlot);
     };
 
     async function getSlots() {
