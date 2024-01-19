@@ -9,6 +9,7 @@ const BookingForm = ({ date, slot }) => {
     const handleConfirm = () => {
         // Make API call to allocate the selected time slot
         // Display confirmation message or error message
+        setConfirmation(true);
     };
 
     return (
@@ -27,8 +28,15 @@ const BookingForm = ({ date, slot }) => {
             <button className='bg-black text-white p-3 rounded-lg' onClick={handleConfirm}>Confirm Call</button>
 
             {confirmation && (
-                <div>
-                    <p>{`Confirmed: ${date}, ${slot} - ${reason}`}</p>
+                <div className='mt-8 bg-green-500 p-3 text-white rounded-md'>
+                    <p className='flex'>
+                        <span className='mr-3'>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                        </span>
+                        {`Confirmed: ${date}, ${slot} - ${reason}`}
+                    </p>
                 </div>
             )}
         </div>

@@ -18,7 +18,7 @@ const TimeSlots = ({ date }) => {
     };
 
     return (
-        <div class="grid lg:grid-cols-2 md:grid-flow-row gap-4">
+        <div className="grid lg:grid-cols-2 md:grid-flow-row gap-4">
             <div className='lg:pr-24 sm:pr-0'>
                 <h2 className='mb-4 text-2xl'>Time Slots: <strong>{date}</strong></h2>
                 
