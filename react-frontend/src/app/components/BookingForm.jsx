@@ -14,11 +14,13 @@ const BookingForm = ({ date, slot }) => {
     return (
         <div>
             <h3 className='mb-4 text-2xl'>Confirm Booking</h3>
+            
             <div>
                 <label>Reason for the call:</label>
                 <input type="text" value={reason} onChange={(e) => setReason(e.target.value)} />
             </div>
             <button onClick={handleConfirm}>Confirm Call</button>
+
             {confirmation && (
                 <div>
                     <p>{`Confirmed: ${date}, ${slot} - ${reason}`}</p>
